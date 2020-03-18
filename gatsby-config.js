@@ -4,7 +4,8 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `Seattle Service Relief`,
+    siteTitleAlt: `Directory for Fundraisers in the Seattle Area`
   },
   plugins: [
     {
@@ -12,31 +13,21 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Home`,
+            slug: `/`
           },
           {
-            title: `About`,
-            slug: `/about`,
-          },
-        ],
-        externalLinks: [
-          {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
-          },
-        ],
-      },
+            title: `Submit a Fundraiser`,
+            slug: `/submit`
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
+      }
     },
     `gatsby-plugin-sitemap`,
     {
@@ -53,18 +44,18 @@ module.exports = {
           {
             src: `/android-chrome-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
             src: `/android-chrome-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
+            type: `image/png`
+          }
+        ]
+      }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify`
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
-  ],
+  ]
 }
