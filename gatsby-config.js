@@ -5,7 +5,13 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     siteTitle: `Seattle Service Relief`,
-    siteTitleAlt: `Directory for Fundraisers in the Seattle Area`
+    siteTitleAlt: `Directory for Fundraisers in the Seattle Area`,
+    siteHeadline: `Seattle Service Relief`,
+    siteDescription: `Directory for Fundraisers in the Seattle Area`,
+    siteUrl: `https://seattleservicerelief.com`,
+    siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
+    author: `@boborchard`
   },
   plugins: [
     {
